@@ -10,6 +10,12 @@ samwellImg.style.cursor = "pointer";
 samwellImg.addEventListener("click", () => {
   count++;
   counter.textContent = "Miles: " + count;
+
+  // play the vroom
+  clickSound.currentTime = 0;
+  clickSound.play();
+  
+  console.log("Image clicked! Miles now:", count);
 });
 
 console.log("pixel-poof activated 🌟");
