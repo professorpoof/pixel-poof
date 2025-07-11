@@ -10,22 +10,11 @@ function updateMiles() {
   counter.textContent = `Miles: ${milesCount}`;
 }
 
-samwellImg.style.cursor = 'pointer';
-samwellImg.addEventListener('click', () => {
-  milesCount++;
-  vroomSound.currentTime = 0;
-  vroomSound.play();
-  updateMiles();
-});
+samwellImg.style.cursor = "pointer";
 
-// — SIMPLE BING-BING PLAYER ON 🎧 TILE —
-const playTile = document.getElementById('play-music');
-const bingAudio = document.getElementById('bing-audio');
-
-playTile.style.cursor = 'pointer';
-playTile.addEventListener('click', () => {
-  bingAudio.currentTime = 0;
-  bingAudio.play();
+samwellImg.addEventListener("click", () => {
+  count++;
+  counter.textContent = "Miles: " + count;
 });
 
 console.log('pixel-poof files loaded 🌟');
