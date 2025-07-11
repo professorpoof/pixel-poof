@@ -6,7 +6,7 @@ samwellImg.style.cursor = "pointer";
 
 samwellImg.addEventListener("click", () => {
   count++;
-  counter.textContent = Miles: ;
+  counter.textContent = "Miles: " + count;
 });
 
 console.log("pixel-poof activated 🌟");
