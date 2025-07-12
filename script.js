@@ -1,21 +1,31 @@
-﻿let count = 0;
-const counter = document.getElementById("counter");
-const samwellImg = document.querySelector(".pixel-scene img");
+﻿// script.js
 
-// load the click sound
-const clickSound = new Audio("assets/sounds/rebel_rev_vroom.mp3");
+// — MILES + VROOM SETUP —
+let milesCount = 0;
+const counter   = document.getElementById('counter');
+const samwellImg = document.querySelector('.pixel-scene img');
+const vroomSound = new Audio('assets/sounds/rebel_rev_vroom.mp3');
 
-samwellImg.style.cursor = "pointer";
+function updateMiles() {
+  counter.textContent = `Miles: ${milesCount}`;
+}
 
-samwellImg.addEventListener("click", () => {
-  count++;
-  counter.textContent = "Miles: " + count;
-
-  // play the vroom
-  clickSound.currentTime = 0;
-  clickSound.play();
-  
-  console.log("Image clicked! Miles now:", count);
+samwellImg.style.cursor = 'pointer';
+samwellImg.addEventListener('click', () => {
+  milesCount++;
+  vroomSound.currentTime = 0;
+  vroomSound.play();
+  updateMiles();
 });
 
-console.log("pixel-poof activated 🌟");
+// — SIMPLE BING-BING PLAYER ON 🎧 TILE —
+const playTile = document.getElementById('play-music');
+const bingAudio = document.getElementById('bing-audio');
+
+playTile.style.cursor = 'pointer';
+playTile.addEventListener('click', () => {
+  bingAudio.currentTime = 0;
+  bingAudio.play();
+});
+
+console.log('pixel-poof files loaded 🌟');
