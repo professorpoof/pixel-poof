@@ -117,3 +117,9 @@ h1 {
 .jiggle {
   animation: jiggle 0.3s infinite;
 } 
+
+/*jiggle animation for the 🎧 tile when clicked or hovered */
+.jiggle,
+#play-music:hover {
+  animation: jiggle 0.3s infinite;
+} 
