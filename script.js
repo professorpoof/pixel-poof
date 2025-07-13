@@ -25,6 +25,14 @@ playTile.style.cursor = "pointer";
 playTile.addEventListener('click', () => {
   hitMyHeart.currentTime = 0;
   hitMyHeart.play();
+
+ // Starts the Jiggle Animation
+ playTile.classList.add('jiggle');
+
+ // Stops the Jiggle Animation when music ends
+ hitMyHeart.onended = () => {
+    playTile.classList.remove('jiggle');
+  };
 });
 
 console.log('pixel-poof files loaded 🌟');
