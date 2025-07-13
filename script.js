@@ -1,6 +1,4 @@
-﻿// script.js
-
-// — MILES + VROOM SETUP —
+﻿// — MILES + VROOM SETUP —
 let milesCount = 0;
 const counter   = document.getElementById('counter');
 const samwellImg = document.querySelector('.pixel-scene img');
@@ -13,8 +11,10 @@ function updateMiles() {
 samwellImg.style.cursor = "pointer";
 
 samwellImg.addEventListener("click", () => {
-  count++;
-  counter.textContent = "Miles: " + count;
+  milesCount++;
+  vroomSound.currentTime = 0; // Reset sound to start
+  vroomSound.play();
+  updateMiles();
 });
 
 console.log('pixel-poof files loaded 🌟');
