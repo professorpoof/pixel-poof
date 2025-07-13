@@ -16,5 +16,15 @@ samwellImg.addEventListener("click", () => {
   vroomSound.play();
   updateMiles();
 });
+// — 🎧 MUSIC TILE SETUP —
+const playTile = document.getElementById('play-music');
+const hitMyHeart = document.getElementById('hit-my-heart');
+
+playTile.style.cursor = "pointer";
+
+playTile.addEventListener('click', () => {
+  hitMyHeart.currentTime = 0;
+  hitMyHeart.play();
+});
 
 console.log('pixel-poof files loaded 🌟');
